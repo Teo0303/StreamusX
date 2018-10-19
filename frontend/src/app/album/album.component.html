@@ -1,0 +1,47 @@
+<div class="wrapper">
+	<div class="main-content" *ngIf="album">
+		<div class="container-fluid">
+			<div class="left content">
+				<div class="cover-art">
+					<div class="action">
+						<button class="play"><fa-icon [icon]="faPlay"></fa-icon></button>
+					</div>
+					<div class="album-img">
+						<img src="{{album.cover}}">
+					</div>
+				</div>
+				<div class="info">
+					<h4 class="album-name">
+						{{album.name}}
+					</h4>
+					<div class="artist-name">
+						<a routerLink="/artist/{{album.artistId}}">{{album.artist}}</a>
+					</div>
+					<button class="btn btn-primary">Pause</button>
+					<span class="songs-count">2 songs</span>
+				</div>
+			</div>
+			<div class="right content">
+				<div class="song-list">
+					<div class="song" *ngFor="let song of songs">
+						<div class="control" (click)="playSound(song)">
+						  	<span class="ctrl-play"><fa-icon [icon]="faPlay"></fa-icon></span>
+							<span class="ctrl-pause"><fa-icon [icon]="faPause"></fa-icon></span>
+						</div>
+						<div class="song-details">
+							<span class="song-name">{{song.song_name}}</span>
+							<div class="other-details">
+								<div class="explicit" *ngIf="song.isExplicit">Explicit</div>
+								<div class="artist">{{song.artist_name}}</div>
+								<div class="album">{{song.album_name}}</div>
+							</div>
+						</div>
+						<div class="duration">3:46</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</div>

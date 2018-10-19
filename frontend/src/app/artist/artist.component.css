@@ -1,0 +1,264 @@
+
+/* Main */
+.header{
+    background: var(--primary);
+    color: white;
+}
+
+.cover{
+    background-image: url('https://images5.alphacoders.com/406/thumb-1920-406088.jpg');
+    background-size: cover;
+    min-height: 400px;
+    position: relative;
+    background-position-y: 20%;
+}
+
+.cover::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: -webkit-gradient(linear,left top,left bottom,color-stop(-30%,transparent),to(#181818));
+    background: linear-gradient(transparent -30%,#181818);
+}
+
+.cover-details{
+    color: white;
+    position: absolute;
+    bottom: 40px;
+    left: 20px;
+}
+
+.cover-details .cover-type{
+    font-weight: 200;
+    font-size: 15px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #999;  
+}
+
+.cover-details .listeners{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 200;
+    color: #999;
+}
+
+.cover-details .cover-name{
+    font-size: 48px;
+    letter-spacing: 2px;
+}
+
+.cover-info{
+    margin-bottom: 20px;
+}
+
+
+/* Sidebar */
+
+.sidebar{
+    height: 100vh;
+}
+
+/* Music list */
+
+.song-item{
+    display: grid;
+    grid-template-columns:70px 60px 1fr auto 50px;
+    align-items: center;
+    color: #999;
+    font-size: 14px;
+    letter-spacing: 1.1px;
+    transition: all .2s ease-out;
+    padding: 3px 20px 0;
+}
+
+.song-item:hover{
+    background: var(--secondary-color);
+}
+
+.song-item .image{
+    align-self: center;
+}
+.song-item .btn-play{
+    display: none;
+    color: #eee;
+    font-size: 9px;
+    background: transparent;
+    border:1px solid #eee;
+    width: 32px;
+    text-align: center;
+    padding: 5px;
+    height: 32px;
+    border-radius: 30px;
+    transition: all 1s ease;
+}
+
+.song-item:hover .btn-play{
+    display: block;
+}
+
+.song-item:hover .order-num{
+    display: none;
+}
+
+.song-details span{
+    display: block;
+}
+
+.song-details .song-name{
+    color: #eee;
+    font-size: 16px;
+    letter-spacing: .8px;
+}
+
+.song-details .artist-name{
+    font-size: 14px;
+    letter-spacing: 1.1px;
+}
+
+.stream-count{
+    text-align: right;
+    display: inline;
+}
+
+.album-img{
+    width: 70px;
+}
+
+.order{
+    justify-self: center;
+}
+
+.list-header{
+    display: flex;
+    margin-top: 20px;
+    padding: 0px 20px;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 10px;
+}
+
+.list-title{
+    color: grey;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.list-header button{
+    justify-content: end;
+    color: grey;
+    font-size: 11px;
+    border-color: grey;
+}
+
+    /* When song is palying */
+    .playing > .song-details .song-name, .playing > .song-details .artist-name{
+        color: var(--light-purple);
+    }
+
+    .playing > .order .order-num{
+        display: none;
+    }
+
+/* Album list */
+
+.singer-albums{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 15px;
+}
+
+.singer-album img{
+    width: 100%;
+}
+
+.sngr-album-info{
+    text-align: center;
+}
+
+.sngr-album-info > h3, a{
+    line-height: 30px;
+}
+
+/* Sidebar */
+
+.albums{
+    position: relative;
+}
+
+.album{
+    margin: 0 auto;
+    cursor: pointer;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    background: var(--primary);
+    color: #eee;    
+    transition: all .4s ease;
+    box-shadow: 0px 9px 20px 0px rgba(0, 0, 0, 0.49);
+}
+
+.album:hover{
+    transform: translateY(-100px);
+}
+
+.album1:hover{
+    transform: translateY(0px);
+}
+
+.album2:hover .album1{
+    transform: translateY(20px);
+}
+
+.album3:hover .album2, .album3:hover .album1{
+    transform: translateY(20px);
+}
+
+.album-info{
+    padding: 5px 10px;
+}
+
+.album1{
+    width: 240px;
+    z-index: 3;
+}
+
+.album2{
+    z-index: 2;
+    top:-40px;
+    left: 10px;
+    width: 220px;
+}
+
+.album3{
+    left: 20px;
+    z-index: 1;
+    top:-80px;
+    width: 200px;
+}
+
+.album .album-img{
+    grid-column: 1/-1;
+}
+
+.album1 .album-img img{
+    width: 240px;
+}
+
+.album2 .album-img img{
+    width: 220px;
+}
+
+.album3 .album-img img{
+    width: 200px;
+}
+
+.album > h4{
+    grid-column: 1/-1;
+}
+
+

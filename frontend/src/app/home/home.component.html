@@ -1,0 +1,56 @@
+<div class="contentSpacing">
+	<header>
+		<ul class="browse-nav">
+			<li class="active">
+				<a routerLink="home/:id" href="#">Featured</a>
+			</li>
+			<li>
+				<a href="#">Charts</a>
+			</li>
+			<li>
+				<a href="#">Genres & Moods</a>
+			</li>
+			<li>
+				<a href="#">New Releases</a>
+			</li>
+			<li>
+				<a href="#">New Releases</a>
+			</li>
+			<li>
+				<a href="#">New Releases</a>
+			</li>
+		</ul>
+	</header>
+	<section class="content">
+		<div class="contentSpacing">
+			<section class="cover-art-header">
+				<h1>New Releases</h1>
+				<div class="view-more">
+					<a href="#" class="more">View More</a>
+				</div>
+			</section>
+			<div class="container-fluid">
+				<div class="items" *ngIf="albums">
+					<div class="item" *ngFor="let album of albums">
+						<a routerLink="/album/{{album.album_id}}/songs" class="album-link">
+							<div class="container-fluid">
+								<div class="cover-art">
+									<div class="action">
+										<button class="play"><fa-icon [icon]="icons[0]"></fa-icon></button>
+									</div>
+									<div class="album-img">
+										<img src="{{album.album_cover}}" alt="">
+									</div>
+								</div>
+								<div class="mo-info">
+									{{album.album_name}}
+								</div>
+							</div>
+						</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+</div>

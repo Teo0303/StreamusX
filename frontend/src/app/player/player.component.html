@@ -1,0 +1,34 @@
+ <div class="player fixed" (onload)="getProgress(progress)">
+	<div class="progress-bar" (click)="handleProgress($event, progress)">
+		<span class="active-progress"  #progress></span>
+	</div>
+	<a href="#" >
+		<div class="song-cover" >
+			<img src="{{cover}}">
+		</div>
+		<div class="song-details" *ngIf="songName">
+			<ul>
+				<li class="artist-name">{{artistName}}</li>
+				<li class="song-name">{{songName}}</li>
+			</ul>
+		</div>
+	</a>
+	<div class="main-action">
+		<div class="btn-group">
+			<button (click)="skip('prev')"><fa-icon [icon]="faStepBackward"></fa-icon></button>
+			<button class="main-control" [class.notplaying]="playing" (click)="playSound()"><fa-icon [icon]="faPlay"></fa-icon></button>
+			<button class="main-control" [class.playing]="playing == false" (click)="pause()"><fa-icon [icon]="faPause"></fa-icon>	</button>
+			<button (click)="skip('next')"><fa-icon [icon]="faStepForward"></fa-icon></button>
+		</div>
+	</div>
+	<div class="other-action">
+		<div class="btn-group">
+			<button (click)="playShuffle()"><fa-icon [class.shuffle]="shuffle" [icon]="faShuffle"></fa-icon></button>
+			<div class="volume-bar">
+				<input class="volume" type="range" #volume 
+					(change)="volumeChange(volume.value)"
+					/>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,55 @@
+a:hover{
+  text-decoration: none !important;
+  color: inherit;
+}
+
+.input-box{
+  padding: 32px 0;
+  background: #333;
+}
+
+.search-info{
+  font-weight: 400;
+  font-size: 14px ;
+  letter-spacing: .015em;
+  word-spacing: 1.1px;
+  line-height: 20px;
+  margin-bottom: .5em;
+}
+
+ul{
+  list-style: none;
+}
+
+input{
+  background: transparent;
+  border: none;
+  font-size: 48px;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: -.005em;
+  line-height: 56px;
+  caret-color: var(--light-purple);
+}
+
+input:focus{
+  outline: none;
+}
+
+.content-spacing{
+  padding-left: 2em;
+}
+
+.name{
+  font-size: 32px;
+}
+
+.type{
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: .05em;
+}
+
+.link-subtle:hover .name{
+  color: #fff;
+}

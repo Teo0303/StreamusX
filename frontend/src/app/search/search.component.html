@@ -1,0 +1,24 @@
+<div class="container-fluid">
+	<div class="input-box">
+		<div class="content-spacing">
+			<div class="search-info">
+				Search for an Artist, Song, Album, Playlist
+			</div>
+			<input type="text" #box
+        (keyup.enter)="search(box.value)"
+        (blur)="search(box.value); box.value=''" 
+        placeholder="Start typing...">
+		</div>
+	</div>
+	<div class="history">
+		<div class="content-spacing">
+			<ul>
+				<li *ngFor="let query of queries">
+					<a href="#" class="link-subtle">
+						<h2 class="name">The Ringer</h2>
+						<span class="type">Kamikaze</span>
+					</a>
+				</li>
+			</ul>
+		</div>
+	</div>

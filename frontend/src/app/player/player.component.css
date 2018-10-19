@@ -1,0 +1,125 @@
+/* Here goes player styles */
+
+.player{
+    z-index: 1000;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    background: var(--primary);
+    color: white;
+    min-height: 70px;
+    align-items: center;
+}
+
+.progress-bar{
+    grid-column: 300px;
+    height: 5px;
+    cursor: pointer;
+    background: var(--secondary-color);
+    transition: all .3s ease-out;
+    grid-column: 1/-1;
+}
+
+.progress-bar:hover{
+    height: 15px;
+}
+
+.active-progress{
+    background: var(--purple);
+    height: 100%;
+    display: block;
+    width: 0;
+    border-radius: 0 20px 20px 0;
+}
+
+.song-cover, .song-cover img{
+    height: 75px;
+    margin:0;
+}
+
+.song-cover, .song-details{
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.song-details ul{
+    margin: 0;
+    list-style: none;
+    font-size: 14px;
+    color: var(--secondary-color);
+}
+
+.song-details .song-name{
+    color: #bbb;
+    font-size: 16px;
+    font-weight: 600;
+    
+}
+
+.main-action > .btn-group button , .other-action > .btn-group button{
+    width: 50px;
+    background: var(--primary);
+    border: 0;
+    color:#aaa;
+    font-size: 17px;
+    font-family: 'Roboto';
+}
+
+.main-action > .btn-group > .main-control{
+    border: 1px solid #bbb;
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    overflow: hidden;
+    transform: scale(0.98);
+    transition: all .1s ease;
+}
+
+.main-action > .btn-group > button:hover, .other-action > .btn-group button{
+    transform: scale(1);
+    color: #eee;
+}
+
+.main-action{
+    justify-self: center;
+}
+
+.other-action{
+    justify-self: end;
+}
+
+.other-action > .btn-group{
+    display: flex;
+    align-items: center;
+}
+
+.volume-bar{
+    display: block;
+    width: 200px;
+    background: var(--light-black);
+    height: 5px;
+    border-radius: 5px;
+}
+
+.volume{
+    display: block;
+    width: 50%;
+    background: var(--purple);
+    height: 100%;
+}
+
+.shuffle{
+    color: var(--purple);
+}
+
+.playing{
+    display: none;
+}
+
+.notplaying{
+    display: none;
+}
+
+

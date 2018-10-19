@@ -1,0 +1,57 @@
+/* Navbar */
+.navbar{
+    grid-area: navbar;
+    position: fixed;
+    background: rgba(0,0,0,0.5);
+    top: 0;
+    left: 0;
+    height: 100vh;
+}
+
+.logo h2{
+    margin: 20px;
+    border-radius: 5px;
+    font-family: Roboto Condensed, sans-serif;   
+    padding: 5px 10px;
+    background: #eee;
+    color: var(--light-purple);
+    text-transform: uppercase;
+}
+
+.logo a{
+    color: var(--light-purple);
+    border-bottom: none;
+}
+
+.menu{
+    padding-bottom: 50px;
+}
+
+.menu ul{
+    list-style: none;
+}
+
+.menu ul a{
+    text-decoration: none;
+    color: #999;
+    font-size: 16px;
+    letter-spacing: 1.4px;
+    font-weight: 600;
+    transition: all .2s ease-in;
+}
+
+.menu ul a:hover{
+    color:#eee;
+}
+
+.menu ul li{
+    margin-bottom: 15px;
+}
+
+.menu a{
+    border-bottom: none;
+}
+
+.meu a:focus{
+    color: var(--light-purple);
+}

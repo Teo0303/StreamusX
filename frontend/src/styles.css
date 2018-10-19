@@ -1,0 +1,194 @@
+/* You can add global styles to this file, and also import other style files */
+:root{
+    --primary: #181818;
+    --light-black: #343434;
+    --secondary-color: #424242;
+    --purple: #6200ea;
+    --light-purple: #7c1eff;
+    --dark-purple: #3e0095;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding:0;
+    color: #eee;
+    font-family: 'Lato', sans-serif;
+    font-weight: 400;
+    font-size: 15px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+}
+
+h1{
+    font-size: 36px;
+    font-weight: 700;
+}
+
+a{
+    color: hsla(0,0%,100%,.6);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+
+}
+
+button:focus{
+    outline: none;
+}
+
+a:hover{
+    color:#eee;
+    border-bottom-color: currentColor;
+}
+
+ul{
+    padding-left:20px;
+}
+
+.btn{
+    letter-spacing: 1.4px;
+    font-size: 11px;
+    color: #eee;
+    background-color: transparent;
+    text-transform: uppercase;
+    border:1px solid #eee;
+    border-radius: 50px;
+    font-weight: 300;
+    line-height: 16px;
+    padding: 11px 44px;
+    border: 1px solid #eee;
+    cursor: pointer;
+    transition: all .2s ease-in;
+}
+
+.btn-primary{
+    background: var(--purple);
+    border-color: var(--purple);
+}
+
+.btn-primary:hover{
+    border-color: var(--light-purple);
+    background: var(--light-purple) !important;
+    color: #eee !important;
+}
+
+.btn:hover{
+    background: #eee;
+    color: #333;
+}
+
+.btn-group > .btn{
+    margin-right: 15px;
+}
+
+.icon{
+    width: 15px;
+}
+
+#content{
+  padding-left: 176px;
+}
+
+/* unholy css to style input type="range" */
+
+input[type=range] {
+  -webkit-appearance: none;
+  background:transparent;
+  width: 100%;
+  margin: 0 5px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: rgba(255,255,255,0.8);
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-webkit-slider-thumb {
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -3.5px;
+  box-shadow:0 0 2px rgba(0,0,0,0.2);
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #bada55;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0), 0 0 1px rgba(13, 13, 13, 0);
+  background: #ffffff;
+  border-radius: 1.3px;
+  border: 0.2px solid rgba(1, 1, 1, 0);
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0), 0 0 0 rgba(13, 13, 13, 0);
+  height: 15px;
+  width: 15px;
+  border-radius: 50px;
+  background: #ffc600;
+  cursor: pointer;
+}
+
+
+@media (min-width: 1200px){
+    .container{
+        min-width: 1200px;
+        width: 100%;
+    }
+}
+
+
+@media (max-width: 1200px){
+    
+    .container{
+        width: 100%;
+        margin: 0 auto;
+    }  
+}
+
+@media (max-width: 700px){
+    .cover{
+        min-height: 200px !important;
+    }
+
+    .song-item{
+        padding: 20px 0 !important;
+        font-size: 11px !important;
+        grid-template-columns: 40px 1fr auto !important; 
+    }
+
+    .song-details .song-name{
+        font-size: 14px !important;
+    }
+
+    .artist-name{
+        font-size: 11px !important;
+    }
+
+    .song-item .image, .queue {
+        display: none;
+        padding: 3px 5px 0 !important; 
+    }
+
+    .btn{
+        font-size: 9px;
+        padding: 6px 14px;
+    }
+}
